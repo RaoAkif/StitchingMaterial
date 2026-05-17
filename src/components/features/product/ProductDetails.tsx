@@ -66,7 +66,7 @@ export const ProductDetails = ({
             </Text>
 
             <Box mt={{ base: 5, lg: 10 }}>
-              <QuantitySelector />
+              <QuantitySelector productName={name} />
             </Box>
           </Box>
         </GridItem>

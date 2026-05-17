@@ -1,10 +1,29 @@
 import { Input } from '@chakra-ui/input';
 import { Box, Button, Flex, FormControl, FormLabel, Text } from '@chakra-ui/react';
-import { ShoppingCartIcon } from '@contentful/f36-icons';
 import { useTranslation } from 'next-i18next';
+import { useState } from 'react';
 
-export const QuantitySelector = () => {
+type QuantitySelectorProps = {
+  productName?: string | null;
+};
+
+export const QuantitySelector = ({ productName }: QuantitySelectorProps) => {
   const { t } = useTranslation();
+  const [quantity, setQuantity] = useState<number>(1);
+
+  const phone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE;
+
+  const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = Number(e.target.value);
+    setQuantity(Number.isNaN(val) ? 0 : val);
+  };
+
+  const handleContactClick = () => {
+    if (!phone) return;
+    const message = `Hello, I'm interested in ${productName ?? 'this product'} (qty: ${quantity}). Could you help me?`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
 
   return (
     <FormControl>
@@ -17,14 +36,9 @@ export const QuantitySelector = () => {
         {t('product.quantity')}
       </Text>
       <Flex flexDirection="row" mt={2}>
-        <Input width={16} min={0} textAlign="center" type="number" defaultValue="1" />
-        <Button
-          ml={2}
-          variant="primary"
-          rightIcon={
-            <Box as={ShoppingCartIcon} width="18px" height="18px" fill="white" variant="white" />
-          }>
-          {t('product.addToCart')}
+        <Input width={16} min={0} textAlign="center" type="number" defaultValue={1} onChange={handleQuantityChange} />
+        <Button ml={2} variant="primary" onClick={handleContactClick} isDisabled={!phone}>
+          {t('product.contactWhatsapp')}
         </Button>
       </Flex>
     </FormControl>
