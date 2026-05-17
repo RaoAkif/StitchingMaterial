@@ -2,6 +2,8 @@ import { Input } from '@chakra-ui/input';
 import { Box, Button, Flex, FormControl, FormLabel, Text } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { useState } from 'react';
+import { Button } from '@chakra-ui/react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 type QuantitySelectorProps = {
   productName?: string | null;
@@ -37,7 +39,19 @@ export const QuantitySelector = ({ productName }: QuantitySelectorProps) => {
       </Text>
       <Flex flexDirection="row" mt={2}>
         <Input width={16} min={0} textAlign="center" type="number" defaultValue={1} onChange={handleQuantityChange} />
-        <Button ml={2} variant="primary" onClick={handleContactClick} isDisabled={!phone}>
+        <Button
+          ml={2}
+          leftIcon={<FaWhatsapp size="20px" />}
+          backgroundColor="#25D366"
+          color="white"
+          _hover={{
+            backgroundColor: '#1ebd59',
+            _disabled: { backgroundColor: '#25D366' }
+          }}
+          _active={{ backgroundColor: '#128C7E' }}
+          onClick={handleContactClick}
+          isDisabled={!phone}
+        >
           {t('product.contactWhatsapp')}
         </Button>
       </Flex>
