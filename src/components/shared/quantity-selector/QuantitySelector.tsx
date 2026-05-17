@@ -40,7 +40,7 @@ export const QuantitySelector = ({ productName }: QuantitySelectorProps) => {
         <Input width={16} min={0} textAlign="center" type="number" defaultValue={1} onChange={handleQuantityChange} />
         <Button
           ml={2}
-          leftIcon={<FaWhatsapp size="20px" />}
+          leftIcon={<FaWhatsapp size="20px" /> as JSX.Element}
           backgroundColor="#25D366"
           color="white"
           _hover={{
