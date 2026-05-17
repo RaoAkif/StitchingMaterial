@@ -20,7 +20,7 @@ export const QuantitySelector = ({ productName }: QuantitySelectorProps) => {
 
   const handleContactClick = () => {
     if (!phone) return;
-    const message = `Hello, I'm interested in ${productName ?? 'this product'} (qty: ${quantity}). Could you help me?`;
+    const message = `Hello, I'm interested in ${productName ?? 'this product'} (Qty: ${quantity}). Could you help me?`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
