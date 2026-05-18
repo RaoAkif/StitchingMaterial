@@ -2,9 +2,9 @@
   "common": {
     "homepage": "Homepage",
     "logoImageAltText": "Logo",
-    "aboutUs": "about us",
-    "description1": "Founded in 1984 by designer Chantelle West, we've always believed in the power of locally made goods.",
-    "description2": "The quality of the craftsmanship and the local artisans we employ are what make Luxette our mission in life.",
+    "aboutUs": "About Us",
+    "description1": "Since our beginning, we have been dedicated to providing high-quality stitching materials and tailoring accessories for creative professionals and sewing enthusiasts.",
+    "description2": "From fabrics, threads, and buttons to premium tailoring tools and embroidery supplies, our mission is to make stitching easier, stylish, and accessible for everyone.",
     "poweredBy": "Powered by",
     "regionalSettings": "Regional Settings",
     "language": "Language"
@@ -13,8 +13,8 @@
     "trendingProducts": "Trending now",
     "relatedProducts": "You may also like",
     "addToCart": "Add to cart",
-    "quantity": "Quantity"
-    ,"contactWhatsapp": "Contact on WhatsApp"
+    "quantity": "Quantity",
+    "contactWhatsapp": "Contact on WhatsApp"
   },
   "notFound": {
     "title": "Page not found",
