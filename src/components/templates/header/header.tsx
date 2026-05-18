@@ -2,8 +2,8 @@ import { Box, BoxProps, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 
-import MobileLogo from '@icons/bonelli-mobile.svg';
-import DesktopLogo from '@icons/bonelli.svg';
+// import MobileLogo from '@icons/bonelli-mobile.svg';
+// import DesktopLogo from '@icons/bonelli.svg';
 import { LanguageSelector } from '@src/components/features/language-selector';
 
 export const HEADER_HEIGHT = 60;
@@ -21,7 +21,7 @@ export const Header = (props: BoxProps) => {
       height={`${HEADER_HEIGHT}px`}
       zIndex="2"
       {...props}>
-      <Link href="/" title={t('common.homepage')}>
+      {/* <Link href="/" title={t('common.homepage')}>
         <Box
           display={{ base: 'none', md: 'block', lg: 'block' }}
           as={DesktopLogo}
@@ -32,7 +32,7 @@ export const Header = (props: BoxProps) => {
           as={MobileLogo}
           title={t('common.logoImageAltText')}
         />
-      </Link>
+      </Link> */}
       <LanguageSelector />
     </Flex>
   );
