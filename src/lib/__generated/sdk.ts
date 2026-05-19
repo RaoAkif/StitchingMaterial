@@ -1293,7 +1293,7 @@ export const PageLandingFieldsFragmentDoc = gql`
   heroBannerImage {
     ...ImageFields
   }
-  productsCollection(limit: 6) {
+  productsCollection(limit: 100) {
     items {
       ...PageProductFields
     }
