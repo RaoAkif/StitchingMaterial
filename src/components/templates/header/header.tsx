@@ -28,8 +28,8 @@ export const Header = (props: BoxProps) => {
           alt={t('common.logoImageAltText')}
           title={t('common.logoImageAltText')}
           display={{ base: 'none', md: 'block', lg: 'block' }}
-          width={{ base: 32, md: 44, lg: 44 }}
-          height={{ base: 32, md: 44, lg: 44 }}
+          width={{ base: '50px', md: '75px', lg: '75px' }}
+          height={{ base: '50px', md: '75px', lg: '75px' }}
         />
         <Box
           as="img"
@@ -37,8 +37,8 @@ export const Header = (props: BoxProps) => {
           alt={t('common.logoImageAltText')}
           title={t('common.logoImageAltText')}
           display={{ base: 'block', md: 'none', lg: 'none' }}
-          width={{ base: 28, md: 32, lg: 32 }}
-          height={{ base: 28, md: 32, lg: 32 }}
+          width={{ base: '56px', md: '64px', lg: '64px' }}
+          height={{ base: '56px', md: '64px', lg: '64px' }}
         />
       </Link>
       <LanguageSelector />
