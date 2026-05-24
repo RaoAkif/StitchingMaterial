@@ -28,7 +28,6 @@ export const Header = (props: BoxProps) => {
           alt={t('common.logoImageAltText')}
           title={t('common.logoImageAltText')}
           display={{ base: 'none', md: 'block', lg: 'block' }}
-          width={{ base: '50px', md: '75px', lg: '75px' }}
           height={{ base: '50px', md: '75px', lg: '75px' }}
         />
         <Box
@@ -37,7 +36,6 @@ export const Header = (props: BoxProps) => {
           alt={t('common.logoImageAltText')}
           title={t('common.logoImageAltText')}
           display={{ base: 'block', md: 'none', lg: 'none' }}
-          width={{ base: '56px', md: '64px', lg: '64px' }}
           height={{ base: '56px', md: '64px', lg: '64px' }}
         />
       </Link>
