@@ -23,14 +23,22 @@ export const Header = (props: BoxProps) => {
       {...props}>
       <Link href="/" title={t('common.homepage')}>
         <Box
-          display={{ base: 'none', md: 'block', lg: 'block' }}
-          as={DesktopLogo}
+          as="img"
+          src={DesktopLogo.src}
+          alt={t('common.logoImageAltText')}
           title={t('common.logoImageAltText')}
+          display={{ base: 'none', md: 'block', lg: 'block' }}
+          width={{ base: 32, md: 44, lg: 44 }}
+          height={{ base: 32, md: 44, lg: 44 }}
         />
         <Box
-          display={{ base: 'block', md: 'none', lg: 'none' }}
-          as={MobileLogo}
+          as="img"
+          src={MobileLogo.src}
+          alt={t('common.logoImageAltText')}
           title={t('common.logoImageAltText')}
+          display={{ base: 'block', md: 'none', lg: 'none' }}
+          width={{ base: 28, md: 32, lg: 32 }}
+          height={{ base: 28, md: 32, lg: 32 }}
         />
       </Link>
       <LanguageSelector />
