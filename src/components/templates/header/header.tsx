@@ -12,7 +12,6 @@ import {
   DrawerHeader,
   DrawerBody,
   VStack,
-  IconButton,
   Icon,
   Link as ChakraLink,
 } from '@chakra-ui/react';
