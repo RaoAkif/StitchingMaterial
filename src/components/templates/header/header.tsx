@@ -97,7 +97,7 @@ export const Header = (props: BoxProps) => {
             Menu
             <IconButton
               aria-label="Close navigation menu"
-              icon={<AiOutlineClose />}
+              icon={<Icon as={AiOutlineClose as any} />}
               onClick={onClose}
               variant="ghost"
             />
