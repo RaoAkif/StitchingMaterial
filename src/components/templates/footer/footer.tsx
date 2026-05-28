@@ -91,7 +91,7 @@ export const Footer = () => {
                   aria-label={social.label}
                   color="gray.600"
                   _hover={{ color: 'blue.500' }}>
-                  {/* Force TypeScript to shut up by casting the icon as 'any' */}
+                  {/* Bypassing internal library layout discrepancies safely using 'as any' */}
                   <Icon as={social.icon as any} boxSize="18px" />
                 </ChakraLink>
               ))}
