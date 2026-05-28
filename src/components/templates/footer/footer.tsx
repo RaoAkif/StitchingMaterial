@@ -9,6 +9,7 @@ import {
   HStack,
   Divider,
   useTheme,
+  Icon, // <-- Added Chakra's Icon component
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import NextLink from 'next/link';
@@ -81,22 +82,19 @@ export const Footer = () => {
               </Text>
             </Stack>
             <HStack spacing={3} mt={2}>
-              {socialLinks.map((social) => {
-                // Assign to a capitalized variable so React knows it's a component
-                const SocialIcon = social.icon;
-                return (
-                  <ChakraLink
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.label}
-                    color="gray.600"
-                    _hover={{ color: 'blue.500' }}>
-                    <SocialIcon size={18} />
-                  </ChakraLink>
-                );
-              })}
+              {socialLinks.map((social) => (
+                <ChakraLink
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  color="gray.600"
+                  _hover={{ color: 'blue.500' }}>
+                  {/* Pass the icon directly into Chakra's as prop */}
+                  <Icon as={social.icon} boxSize={4} />
+                </ChakraLink>
+              ))}
             </HStack>
           </Stack>
         </SimpleGrid>
