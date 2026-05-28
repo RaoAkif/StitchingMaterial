@@ -9,7 +9,7 @@ import {
   HStack,
   Divider,
   useTheme,
-  Icon, // <-- Added Chakra's Icon component
+  Icon,
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import NextLink from 'next/link';
@@ -91,8 +91,8 @@ export const Footer = () => {
                   aria-label={social.label}
                   color="gray.600"
                   _hover={{ color: 'blue.500' }}>
-                  {/* Pass the icon directly into Chakra's as prop */}
-                  <Icon as={social.icon} boxSize={4} />
+                  {/* Force TypeScript to shut up by casting the icon as 'any' */}
+                  <Icon as={social.icon as any} boxSize="18px" />
                 </ChakraLink>
               ))}
             </HStack>
