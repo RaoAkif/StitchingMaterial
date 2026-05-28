@@ -5,6 +5,12 @@
     "aboutUs": "About Us",
     "description1": "Since our beginning, we have been dedicated to providing high-quality stitching materials and tailoring accessories for creative professionals and sewing enthusiasts.",
     "description2": "From fabrics, threads, and buttons to premium tailoring tools and embroidery supplies, our mission is to make stitching easier, stylish, and accessible for everyone.",
+    "nav": {
+      "about": "About",
+      "contact": "Contact Us",
+      "privacyPolicy": "Privacy Policy",
+      "terms": "Terms & Conditions"
+    },
     "poweredBy": "Powered by",
     "regionalSettings": "Regional Settings",
     "language": "Language"

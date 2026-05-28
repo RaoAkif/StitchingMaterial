@@ -5,6 +5,12 @@
     "aboutUs": "über uns",
     "description1": "Wir wurden 1984 von der Designerin Chantelle West gegründet und haben schon immer an die Kraft lokal hergestellter Waren geglaubt.",
     "description2": "Die Qualität der Handwerkskunst und die lokalen Handwerker, die wir beschäftigen, machen Luxette zu unserer Lebensaufgabe.",
+    "nav": {
+      "about": "Über",
+      "contact": "Kontakt",
+      "privacyPolicy": "Datenschutz",
+      "terms": "AGB"
+    },
     "poweredBy": "Unterstützt von",
     "regionalSettings": "Regionale Einstellungen",
     "language": "Sprache"
