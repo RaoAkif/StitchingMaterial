@@ -1,5 +1,3 @@
-import NextLink from 'next/link';
-import { createElement } from 'react';
 import {
   Box,
   Container,
@@ -12,9 +10,10 @@ import {
   Divider,
   useTheme,
 } from '@chakra-ui/react';
-import { FaFacebookF, FaInstagram, FaPinterestP, FaTiktok } from 'react-icons/fa';
-import type { IconType } from 'react-icons';
 import { useTranslation } from 'next-i18next';
+import NextLink from 'next/link';
+import type { IconType } from 'react-icons';
+import { FaFacebookF, FaInstagram, FaPinterestP, FaTiktok } from 'react-icons/fa';
 
 const navLinks = [
   { label: 'About', href: '/about' },
@@ -82,18 +81,22 @@ export const Footer = () => {
               </Text>
             </Stack>
             <HStack spacing={3} mt={2}>
-              {socialLinks.map((social) => (
-                <ChakraLink
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  color="gray.600"
-                  _hover={{ color: 'blue.500' }}>
-                  {createElement(social.icon, { size: 18 })}
-                </ChakraLink>
-              ))}
+              {socialLinks.map((social) => {
+                // Assign to a capitalized variable so React knows it's a component
+                const SocialIcon = social.icon;
+                return (
+                  <ChakraLink
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    color="gray.600"
+                    _hover={{ color: 'blue.500' }}>
+                    <SocialIcon size={18} />
+                  </ChakraLink>
+                );
+              })}
             </HStack>
           </Stack>
         </SimpleGrid>
