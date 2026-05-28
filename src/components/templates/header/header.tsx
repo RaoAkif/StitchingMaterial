@@ -14,7 +14,7 @@ import {
   VStack,
   Link as ChakraLink,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useTranslation } from 'next-i18next';
 
 import MobileLogo from '@icons/bonelli-mobile.png';
@@ -81,7 +81,7 @@ export const Header = (props: BoxProps) => {
           <LanguageSelector />
           <IconButton
             aria-label="Open navigation menu"
-            icon={<HamburgerIcon />}
+            icon={<AiOutlineMenu />}
             display={{ base: 'flex', md: 'none' }}
             onClick={onOpen}
             variant="ghost"
@@ -96,7 +96,7 @@ export const Header = (props: BoxProps) => {
             Menu
             <IconButton
               aria-label="Close navigation menu"
-              icon={<CloseIcon />}
+              icon={<AiOutlineClose />}
               onClick={onClose}
               variant="ghost"
             />
