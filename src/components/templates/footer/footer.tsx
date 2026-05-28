@@ -17,12 +17,7 @@ export const Footer = () => {
         <Text mb={8}>{t('common.aboutUs')}</Text>
         <Text>{t('common.description1')}</Text>
         <Text mb={8}>{t('common.description2')}</Text>
-        <Text variant="small">
-          {t('common.poweredBy')}{' '}
-          <Link href="https://contentful.com" isExternal color={theme.f36.blue500}>
-            Contentful
-          </Link>
-        </Text>
+        <Text variant="small">Copyright StitchingMaterial 2026</Text>
       </Container>
     </Box>
   );
