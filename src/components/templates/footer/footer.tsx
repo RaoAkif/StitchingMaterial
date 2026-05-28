@@ -1,4 +1,5 @@
 import NextLink from 'next/link';
+import { createElement } from 'react';
 import {
   Box,
   Container,
@@ -81,21 +82,18 @@ export const Footer = () => {
               </Text>
             </Stack>
             <HStack spacing={3} mt={2}>
-              {socialLinks.map((social) => {
-                const IconComponent = social.icon;
-                return (
-                  <ChakraLink
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.label}
-                    color="gray.600"
-                    _hover={{ color: 'blue.500' }}>
-                    <IconComponent size={18} />
-                  </ChakraLink>
-                );
-              })}
+              {socialLinks.map((social) => (
+                <ChakraLink
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  color="gray.600"
+                  _hover={{ color: 'blue.500' }}>
+                  {createElement(social.icon, { size: 18 })}
+                </ChakraLink>
+              ))}
             </HStack>
           </Stack>
         </SimpleGrid>
