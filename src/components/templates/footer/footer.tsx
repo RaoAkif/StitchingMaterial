@@ -9,10 +9,10 @@ import {
   Heading,
   HStack,
   Divider,
-  Icon,
   useTheme,
 } from '@chakra-ui/react';
 import { FaFacebookF, FaInstagram, FaPinterestP, FaTiktok } from 'react-icons/fa';
+import type { IconType } from 'react-icons';
 import { useTranslation } from 'next-i18next';
 
 const navLinks = [
@@ -22,7 +22,7 @@ const navLinks = [
   { label: 'Terms & Conditions', href: '/terms' },
 ];
 
-const socialLinks = [
+const socialLinks: Array<{ label: string; href: string; icon: IconType }> = [
   { label: 'Instagram', href: 'https://instagram.com', icon: FaInstagram },
   { label: 'Facebook', href: 'https://facebook.com', icon: FaFacebookF },
   { label: 'Pinterest', href: 'https://pinterest.com', icon: FaPinterestP },
@@ -81,18 +81,21 @@ export const Footer = () => {
               </Text>
             </Stack>
             <HStack spacing={3} mt={2}>
-              {socialLinks.map((social) => (
-                <ChakraLink
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  color="gray.600"
-                  _hover={{ color: 'blue.500' }}>
-                  <Icon as={social.icon} boxSize="18px" />
-                </ChakraLink>
-              ))}
+              {socialLinks.map((social) => {
+                const IconComponent = social.icon;
+                return (
+                  <ChakraLink
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    color="gray.600"
+                    _hover={{ color: 'blue.500' }}>
+                    <IconComponent size={18} />
+                  </ChakraLink>
+                );
+              })}
             </HStack>
           </Stack>
         </SimpleGrid>
