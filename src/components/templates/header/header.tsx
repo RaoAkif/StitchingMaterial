@@ -48,7 +48,7 @@ export const Header = (props: BoxProps) => {
     <>
       <Flex
         as="nav"
-        position="sticky"
+        position="fixed"
         top="0"
         left="0"
         right="0"

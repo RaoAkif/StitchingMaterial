@@ -1,4 +1,4 @@
-import { Flex, useTheme } from '@chakra-ui/react';
+import { Box, Flex, useTheme } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
 
@@ -21,6 +21,7 @@ export const Layout = ({ children }: LayoutPropsInterface) => {
         borderBottom={isHomePage ? '' : '1px'}
         borderColor={isHomePage ? null : theme.f36.gray200}
       />
+      <Box height={`${HEADER_HEIGHT}px`} />
       <Flex flexGrow="1" flexDirection="column" width="100%" as="main" pb={{ base: 8, lg: 12 }}>
         {children}
       </Flex>
