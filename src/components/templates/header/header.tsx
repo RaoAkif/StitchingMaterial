@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import NextLink from 'next/link';
 import {
   Box,
@@ -12,7 +13,6 @@ import {
   DrawerHeader,
   DrawerBody,
   VStack,
-  Icon,
   Link as ChakraLink,
 } from '@chakra-ui/react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
@@ -34,17 +34,33 @@ const navLinks = [
 export const Header = (props: BoxProps) => {
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
       <Flex
         as="nav"
+        position="sticky"
+        top="0"
+        width="100%"
         justifyContent="space-between"
         align="center"
         pl={{ base: 4, md: 12, lg: 12 }}
         pr={{ base: 4, md: 12, lg: 12 }}
         height={`${HEADER_HEIGHT}px`}
-        zIndex="2"
+        zIndex="banner"
+        bg={isScrolled ? 'rgba(255,255,255,0.94)' : 'rgba(255,255,255,0.82)'}
+        boxShadow={isScrolled ? '0 16px 40px rgba(0,0,0,0.08)' : 'none'}
+        borderBottom={isScrolled ? '1px solid rgba(0,0,0,0.08)' : '1px solid transparent'}
+        backdropFilter="saturate(180%) blur(16px)"
+        transition="all 0.2s ease"
         {...props}>
         <NextLink href="/" passHref legacyBehavior>
           <ChakraLink title={t('common.homepage')} _hover={{ textDecoration: 'none' }}>
@@ -71,7 +87,7 @@ export const Header = (props: BoxProps) => {
         <HStack spacing={8} display={{ base: 'none', md: 'flex' }}>
           {navLinks.map((link) => (
             <NextLink key={link.href} href={link.href} passHref legacyBehavior>
-              <ChakraLink fontWeight="medium" color="gray.700" _hover={{ color: 'blue.500' }}>
+              <ChakraLink fontWeight="medium" color="gray.800" _hover={{ color: 'blue.500' }}>
                 {t(link.labelKey)}
               </ChakraLink>
             </NextLink>
@@ -82,7 +98,7 @@ export const Header = (props: BoxProps) => {
           <LanguageSelector />
           <IconButton
             aria-label="Open navigation menu"
-            icon={<Icon as={AiOutlineMenu as any} />}
+            icon={<AiOutlineMenu size={24} />}
             display={{ base: 'flex', md: 'none' }}
             onClick={onOpen}
             variant="ghost"
@@ -97,7 +113,7 @@ export const Header = (props: BoxProps) => {
             Menu
             <IconButton
               aria-label="Close navigation menu"
-              icon={<Icon as={AiOutlineClose as any} />}
+              icon={<AiOutlineClose size={24} />}
               onClick={onClose}
               variant="ghost"
             />

@@ -1,5 +1,8 @@
 import Head from 'next/head';
+import { GetStaticProps } from 'next';
 import { Container, Heading, Text, Stack, Link } from '@chakra-ui/react';
+
+import { getServerSideTranslations } from '@src/pages/utils/get-serverside-translations';
 
 const ContactPage = () => {
   return (
@@ -39,5 +42,11 @@ const ContactPage = () => {
     </>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await getServerSideTranslations(locale)),
+  },
+});
 
 export default ContactPage;
