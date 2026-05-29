@@ -16,7 +16,7 @@ const AboutPage = () => {
             About StitchingMaterial
           </Heading>
           <Text fontSize="lg" color="gray.700">
-            StitchingMaterial is your destination for premium sewing and tailoring supplies, carefully curated for makers, designers, and craft lovers.
+            Stitching Material is your destination for premium sewing and tailoring supplies, carefully curated for makers, designers, and craft lovers.
           </Text>
           <Stack spacing={4} fontSize="md" color="gray.600">
             <Text>
@@ -26,7 +26,7 @@ const AboutPage = () => {
               Our team is committed to providing trusted service, fast order fulfillment, and helpful guidance for both new sewers and experienced professionals.
             </Text>
             <Text>
-              Whether you are designing custom garments, finishing a home sewing project, or stocking your studio, StitchingMaterial has the products and support you need.
+              Whether you are designing custom garments, finishing a home sewing project, or stocking your studio, Stitching Material has the products and support you need.
             </Text>
           </Stack>
         </Stack>

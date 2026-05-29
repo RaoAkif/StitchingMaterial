@@ -16,7 +16,7 @@ const TermsPage = () => {
             Terms & Conditions
           </Heading>
           <Text fontSize="lg" color="gray.700">
-            These terms govern your use of StitchingMaterial and the purchase of products through our website.
+            These terms govern your use of Stitching Material and the purchase of products through our website.
           </Text>
           <Stack spacing={4} fontSize="md" color="gray.600">
             <Text>

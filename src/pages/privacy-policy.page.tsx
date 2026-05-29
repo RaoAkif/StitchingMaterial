@@ -16,7 +16,7 @@ const PrivacyPolicyPage = () => {
             Privacy Policy
           </Heading>
           <Text fontSize="lg" color="gray.700">
-            StitchingMaterial collects only the information needed to fulfill orders and provide excellent customer service.
+            Stitching Material collects only the information needed to fulfill orders and provide excellent customer service.
           </Text>
           <Stack spacing={4} fontSize="md" color="gray.600">
             <Text>
