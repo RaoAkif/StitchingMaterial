@@ -8,7 +8,7 @@ const ContactPage = () => {
   return (
     <>
       <Head>
-        <title>Contact Us - StitchingMaterial</title>
+        <title>Contact Us - Stitching Material</title>
       </Head>
       <Container maxW="container.lg" py={{ base: 10, md: 16 }}>
         <Stack spacing={6}>

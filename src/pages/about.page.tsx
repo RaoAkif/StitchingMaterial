@@ -8,12 +8,12 @@ const AboutPage = () => {
   return (
     <>
       <Head>
-        <title>About StitchingMaterial</title>
+        <title>About Stitching Material</title>
       </Head>
       <Container maxW="container.lg" py={{ base: 10, md: 16 }}>
         <Stack spacing={6}>
           <Heading as="h1" size="2xl">
-            About StitchingMaterial
+            About Stitching Material
           </Heading>
           <Text fontSize="lg" color="gray.700">
             Stitching Material is your destination for premium sewing and tailoring supplies, carefully curated for makers, designers, and craft lovers.

@@ -8,7 +8,7 @@ const PrivacyPolicyPage = () => {
   return (
     <>
       <Head>
-        <title>Privacy Policy - StitchingMaterial</title>
+        <title>Privacy Policy - Stitching Material</title>
       </Head>
       <Container maxW="container.lg" py={{ base: 10, md: 16 }}>
         <Stack spacing={6}>

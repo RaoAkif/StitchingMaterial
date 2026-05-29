@@ -8,7 +8,7 @@ const TermsPage = () => {
   return (
     <>
       <Head>
-        <title>Terms & Conditions - StitchingMaterial</title>
+        <title>Terms & Conditions - Stitching Material</title>
       </Head>
       <Container maxW="container.lg" py={{ base: 10, md: 16 }}>
         <Stack spacing={6}>
