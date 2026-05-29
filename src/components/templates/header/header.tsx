@@ -74,7 +74,7 @@ export const Header = (props: BoxProps) => {
               title={t('common.logoImageAltText')}
               display={{ base: 'none', md: 'block', lg: 'block' }}
               height={{ base: '40px', md: '60px', lg: '60px' }}
-              mt={{ base: 0, md: '4px', lg: '7px' }}
+              // mt={{ base: 0, md: '4px', lg: '7px' }}
             />
             <Box
               as="img"
