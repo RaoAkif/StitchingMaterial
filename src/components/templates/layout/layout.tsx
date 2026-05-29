@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
 
 import { Footer } from '../footer';
-import { Header } from '../header';
+import { Header, HEADER_HEIGHT } from '../header';
 
 interface LayoutPropsInterface {
   children: ReactNode;
