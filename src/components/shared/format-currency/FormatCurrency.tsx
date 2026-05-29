@@ -1,4 +1,3 @@
-import { getCurrency } from 'locale-currency';
 import { useRouter } from 'next/router';
 
 interface FormatCurrencyProps {
@@ -15,7 +14,11 @@ export const formatCurrencyFunc = ({
 }: FormatCurrencyProps) => {
   if (!locale) return null;
 
-  return new Intl.NumberFormat(locale, { style, currency: 'Rs.' }).format(value);
+  return new Intl.NumberFormat(locale, {
+    style,
+    currency: 'PKR',
+    currencyDisplay: 'narrowSymbol',
+  }).format(value);
 };
 
 export const FormatCurrency = (props: FormatCurrencyProps) => {
