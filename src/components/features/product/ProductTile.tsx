@@ -38,9 +38,10 @@ export const ProductTile = ({
           {name && (
             <Text
               {...inspectorProps({ fieldId: 'name' })}
-              fontSize="lg"
-              fontWeight="semibold"
+              fontSize={{ base: 'md', md: 'lg' }}
+              fontWeight="bold"
               noOfLines={2}
+              lineHeight="1.3"
               color={theme.f36.gray900}>
               {name}
             </Text>
@@ -48,10 +49,11 @@ export const ProductTile = ({
           {price && (
             <Text
               {...inspectorProps({ fieldId: 'price' })}
-              mt={2}
-              fontSize="md"
-              fontWeight="bold"
-              color={theme.f36.gray800}>
+              mt={3}
+              fontSize={{ base: 'xl', md: '2xl' }}
+              fontWeight="extrabold"
+              color={theme.f36.blue600}
+              letterSpacing="tight">
               <FormatCurrency value={price} />
             </Text>
           )}
