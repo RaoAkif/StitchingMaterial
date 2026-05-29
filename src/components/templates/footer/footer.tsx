@@ -108,11 +108,9 @@ export const Footer = () => {
         color="white" 
         py={4} 
         px={{ base: 4, md: 8 }}
-        position="fixed"
         bottom={0}
         left={0}
         w="full"
-        zIndex={10}
       >
         <Container maxW="container.xl">
           <HStack justify="space-between" flexDirection={{ base: 'column', md: 'row' }} gap={3}>
@@ -120,7 +118,7 @@ export const Footer = () => {
               Copyright StitchingMaterial 2026
             </Text>
             <Text fontSize="sm" color="white">
-              Designed for the modern sewing community.
+              Designed for the beautiful sewing community.
             </Text>
           </HStack>
         </Container>
