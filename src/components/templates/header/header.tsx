@@ -13,6 +13,7 @@ import {
   DrawerHeader,
   DrawerBody,
   VStack,
+  Icon,
   Link as ChakraLink,
 } from '@chakra-ui/react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
@@ -98,7 +99,7 @@ export const Header = (props: BoxProps) => {
           <LanguageSelector />
           <IconButton
             aria-label="Open navigation menu"
-            icon={<AiOutlineMenu size={24} />}
+            icon={<Icon as={AiOutlineMenu as any} />}
             display={{ base: 'flex', md: 'none' }}
             onClick={onOpen}
             variant="ghost"
@@ -113,7 +114,7 @@ export const Header = (props: BoxProps) => {
             Menu
             <IconButton
               aria-label="Close navigation menu"
-              icon={<AiOutlineClose size={24} />}
+              icon={<Icon as={AiOutlineClose as any} />}
               onClick={onClose}
               variant="ghost"
             />
