@@ -99,16 +99,18 @@ export const Footer = () => {
           </Stack>
         </SimpleGrid>
 
-        <Divider borderColor={theme.f36.gray200} my={8} />
+        <Divider borderColor={theme.f36.gray200} mb={0} />
 
-        <HStack justify="space-between" flexDirection={{ base: 'column', md: 'row' }} gap={3}>
-          <Text fontSize="sm" color="gray.500">
-            Copyright StitchingMaterial 2026
-          </Text>
-          <Text fontSize="sm" color="gray.500">
-            Designed for the modern sewing community.
-          </Text>
-        </HStack>
+        <Box bg="black" color="white" py={6} px={{ base: 0, md: 4 }}>
+          <HStack justify="space-between" flexDirection={{ base: 'column', md: 'row' }} gap={3}>
+            <Text fontSize="sm" color="white">
+              Copyright StitchingMaterial 2026
+            </Text>
+            <Text fontSize="sm" color="white">
+              Designed for the modern sewing community.
+            </Text>
+          </HStack>
+        </Box>
       </Container>
     </Box>
   );
