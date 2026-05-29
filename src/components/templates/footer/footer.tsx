@@ -38,10 +38,12 @@ export const Footer = () => {
     <Box
       as="footer"
       width="full"
-      py={{ base: 10, lg: 16 }}
+      pt={{ base: 10, lg: 16 }}
+      pb={{ base: "80px", md: "60px" }} 
       mt="auto"
       borderTop="1px"
       borderColor={theme.f36.gray200}>
+      
       <Container maxW="container.xl">
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
           <Stack spacing={4}>
@@ -91,7 +93,6 @@ export const Footer = () => {
                   aria-label={social.label}
                   color="gray.600"
                   _hover={{ color: 'blue.500' }}>
-                  {/* Bypassing internal library layout discrepancies safely using 'as any' */}
                   <Icon as={social.icon as any} boxSize="18px" />
                 </ChakraLink>
               ))}
@@ -99,9 +100,21 @@ export const Footer = () => {
           </Stack>
         </SimpleGrid>
 
-        <Divider borderColor={theme.f36.gray200} mb={0} />
+        <Divider borderColor={theme.f36.gray200} mt={10} mb={0} />
+      </Container>
 
-        <Box bg="black" color="white" py={6} px={{ base: 0, md: 4 }}>
+      <Box 
+        bg="black" 
+        color="white" 
+        py={4} 
+        px={{ base: 4, md: 8 }}
+        position="fixed"
+        bottom={0}
+        left={0}
+        w="full"
+        zIndex={10}
+      >
+        <Container maxW="container.xl">
           <HStack justify="space-between" flexDirection={{ base: 'column', md: 'row' }} gap={3}>
             <Text fontSize="sm" color="white">
               Copyright StitchingMaterial 2026
@@ -110,8 +123,8 @@ export const Footer = () => {
               Designed for the modern sewing community.
             </Text>
           </HStack>
-        </Box>
-      </Container>
+        </Container>
+      </Box>
     </Box>
   );
 };
