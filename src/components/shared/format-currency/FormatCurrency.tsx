@@ -14,11 +14,13 @@ export const formatCurrencyFunc = ({
 }: FormatCurrencyProps) => {
   if (!locale) return null;
 
-  return new Intl.NumberFormat(locale, {
+  const formatted = new Intl.NumberFormat(locale, {
     style,
     currency: 'PKR',
     currencyDisplay: 'narrowSymbol',
   }).format(value);
+
+  return formatted.replace(/^Rs(?=[\d\s\u00A0])/, 'Rs.');
 };
 
 export const FormatCurrency = (props: FormatCurrencyProps) => {
