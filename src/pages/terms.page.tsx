@@ -23,7 +23,7 @@ const TermsPage = () => {
               Orders are subject to availability and confirmation of the order price. We reserve the right to refuse or cancel any order for any reason.
             </Text>
             <Text>
-              Payment is processed securely through our payment provider. All prices are shown in USD unless otherwise indicated.
+              Payment is processed securely through our payment provider. All prices are shown in Pakistani Ruppees unless otherwise indicated.
             </Text>
             <Text>
               Shipping timelines are estimates; actual delivery may vary due to carrier and destination conditions.

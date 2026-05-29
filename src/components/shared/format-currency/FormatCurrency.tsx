@@ -12,15 +12,10 @@ export const formatCurrencyFunc = ({
   value,
   locale,
   style = 'currency',
-  currency,
 }: FormatCurrencyProps) => {
   if (!locale) return null;
 
-  const currencyFromLocale = getCurrency(locale);
-
-  return new Intl.NumberFormat(locale, { style, currency: currency || currencyFromLocale }).format(
-    value,
-  );
+  return new Intl.NumberFormat(locale, { style, currency: 'Rs.' }).format(value);
 };
 
 export const FormatCurrency = (props: FormatCurrencyProps) => {
