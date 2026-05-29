@@ -52,7 +52,7 @@ export const ProductTile = ({
               mt={3}
               fontSize={{ base: 'xl', md: '2xl' }}
               fontWeight="extrabold"
-              color={theme.f36.blue600}
+              color="#f57224"
               letterSpacing="tight">
               <FormatCurrency value={price} />
             </Text>
