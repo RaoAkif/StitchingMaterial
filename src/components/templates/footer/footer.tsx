@@ -39,11 +39,11 @@ export const Footer = () => {
       as="footer"
       width="full"
       pt={{ base: 10, lg: 16 }}
-      pb={0} 
+      pb={0}
       mt="auto"
       borderTop="1px"
       borderColor={theme.f36.gray200}>
-      
+
       <Container maxW="container.xl" pb={{ base: 10, lg: 16 }}>
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
           <Stack spacing={4}>
@@ -101,14 +101,14 @@ export const Footer = () => {
         </SimpleGrid>
       </Container>
 
-      <Box 
-        bg="black" 
-        color="white" 
-        py={6} 
+      <Box
+        bg="black"
+        color="white"
+        py={6}
         px={{ base: 4, md: 8 }}
         width="100%"
       >
-=        <Container maxW="container.xl">
+        <Container maxW="container.xl">
           <HStack justify="space-between" flexDirection={{ base: 'column', md: 'row' }} gap={3}>
             <Text fontSize="sm" color="white">
               Copyright Stitching Material 2026
