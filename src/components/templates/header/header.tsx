@@ -50,16 +50,18 @@ export const Header = (props: BoxProps) => {
         as="nav"
         position="sticky"
         top="0"
+        left="0"
+        right="0"
         width="100%"
         justifyContent="space-between"
         align="center"
         pl={{ base: 4, md: 12, lg: 12 }}
         pr={{ base: 4, md: 12, lg: 12 }}
         height={`${HEADER_HEIGHT}px`}
-        zIndex="banner"
-        bg={isScrolled ? 'rgba(255,255,255,0.94)' : 'rgba(255,255,255,0.82)'}
-        boxShadow={isScrolled ? '0 16px 40px rgba(0,0,0,0.08)' : 'none'}
-        borderBottom={isScrolled ? '1px solid rgba(0,0,0,0.08)' : '1px solid transparent'}
+        zIndex={9999}
+        bg={isScrolled ? 'rgba(255,255,255,0.96)' : 'rgba(255,255,255,0.94)'}
+        boxShadow={isScrolled ? '0 18px 45px rgba(0,0,0,0.12)' : '0 8px 24px rgba(0,0,0,0.04)'}
+        borderBottom="1px solid rgba(0,0,0,0.08)"
         backdropFilter="saturate(180%) blur(16px)"
         transition="all 0.2s ease"
         {...props}>
