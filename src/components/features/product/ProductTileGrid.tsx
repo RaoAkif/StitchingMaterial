@@ -12,9 +12,9 @@ export const ProductTileGrid = ({ title, products }: ProductTileGridProps) => {
   return (
     <Container>
       {title && (
-        <Heading as="h2" mb={3}>
-          {title}
-        </Heading>
+        // <Heading as="h2" mb={3}>
+        //   {title}
+        // </Heading>
       )}
       <Grid
         templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
