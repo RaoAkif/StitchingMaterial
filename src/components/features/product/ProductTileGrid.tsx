@@ -10,18 +10,34 @@ interface ProductTileGridProps {
 
 export const ProductTileGrid = ({ title, products }: ProductTileGridProps) => {
   return (
-    <Container>
-      {/* {title && (
-        <Heading as="h2" mb={3}>
+    <Container maxW="container.xl" py={{ base: 8, md: 12 }} px={{ base: 4, md: 8 }}>
+      {title && (
+        <Heading 
+          as="h2" 
+          size="xl" 
+          fontWeight="semibold"
+          mb={{ base: 6, md: 8 }}
+          color="gray.800"
+        >
           {title}
         </Heading>
-      )} */}
+      )}
       <Grid
-        templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
-        rowGap={{ base: 6, lg: 6 }}
-        columnGap={{ base: 4, lg: 24 }}>
+        templateColumns={{ 
+          base: '1fr',
+          sm: 'repeat(2, 1fr)',
+          lg: 'repeat(3, 1fr)'
+        }}
+        columnGap={{ base: 4, md: 6, lg: 8 }}
+        rowGap={{ base: 6, md: 8, lg: 10 }}
+      >
         {products.map((product, index) => {
-          return <GridItem key={index}>{product ? <ProductTile {...product} /> : null}</GridItem>;
+          if (!product) return null;
+          return (
+            <GridItem key={product.id || index}>
+              <ProductTile {...product} />
+            </GridItem>
+          );
         })}
       </Grid>
     </Container>
