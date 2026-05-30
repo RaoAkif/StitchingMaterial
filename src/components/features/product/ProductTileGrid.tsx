@@ -10,7 +10,14 @@ interface ProductTileGridProps {
 
 export const ProductTileGrid = ({ title, products }: ProductTileGridProps) => {
   return (
-    <Container maxW="container.xl" py={{ base: 8, md: 12 }} px={{ base: 4, md: 8 }}>
+    // By setting a strict maxW and mx="auto", the grid stops expanding on massive monitors 
+    // and naturally creates beautiful, wide margins on the left and right walls.
+    <Container 
+      maxW="1200px" 
+      mx="auto" 
+      px={{ base: 4, md: 8, lg: 12 }} 
+      py={{ base: 8, md: 12 }}
+    >
       {title && (
         <Heading 
           as="h2" 
@@ -24,10 +31,12 @@ export const ProductTileGrid = ({ title, products }: ProductTileGridProps) => {
       )}
       <Grid
         templateColumns={{ 
-          base: '1fr',
-          sm: 'repeat(2, 1fr)',
-          lg: 'repeat(3, 1fr)'
+          base: '1fr', 
+          sm: 'repeat(2, 1fr)', 
+          lg: 'repeat(3, 1fr)' 
         }}
+        // Keeping the column gap tight (max 32px / 2rem) forces the tiles closer 
+        // together on desktop instead of letting them drift apart.
         columnGap={{ base: 4, md: 6, lg: 8 }}
         rowGap={{ base: 6, md: 8, lg: 10 }}
       >
