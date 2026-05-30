@@ -12,7 +12,7 @@ export const heading: ComponentStyleConfig = {
     },
   },
   baseStyle: {
-    fontWeight: 600,
+    fontWeight: 700,
     fontSize: { base: '1.75rem', lg: '2.25rem' },
     lineHeight: { base: 1.28571, lg: 1.33333 },
   },

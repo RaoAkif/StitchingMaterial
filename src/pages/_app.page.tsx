@@ -1,66 +1,23 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import { ContentfulLivePreviewProvider } from '@contentful/live-preview/react';
-import localFont from '@next/font/local';
+import { Inter, Poppins } from '@next/font/google';
 import { appWithTranslation } from 'next-i18next';
 import type { AppProps } from 'next/app';
-import { useRouter } from "next/router"
+import { useRouter } from 'next/router';
 
 import { Layout } from '@src/components/templates/layout';
 import { theme } from '@src/theme';
 
-const spaceGrotesk = localFont({
-  src: [
-    {
-      path: './utils/fonts/space-grotesk-v13-latin-300.woff',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: './utils/fonts/space-grotesk-v13-latin-300.woff2',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: './utils/fonts/space-grotesk-v13-latin-regular.woff',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './utils/fonts/space-grotesk-v13-latin-regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './utils/fonts/space-grotesk-v13-latin-500.woff',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: './utils/fonts/space-grotesk-v13-latin-500.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: './utils/fonts/space-grotesk-v13-latin-600.woff',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: './utils/fonts/space-grotesk-v13-latin-600.woff2',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: './utils/fonts/space-grotesk-v13-latin-700.woff',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: './utils/fonts/space-grotesk-v13-latin-700.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['500', '600', '700'],
 });
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -75,8 +32,8 @@ const App = ({ Component, pageProps }: AppProps) => {
         theme={{
           ...theme,
           fonts: {
-            heading: `${spaceGrotesk.style.fontFamily}, ${theme.fonts.heading}`,
-            body: `${spaceGrotesk.style.fontFamily}, ${theme.fonts.body}`,
+            heading: `${poppins.style.fontFamily}, ${theme.fonts.heading}`,
+            body: `${inter.style.fontFamily}, ${theme.fonts.body}`,
           },
         }}>
         <Layout>

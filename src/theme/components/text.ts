@@ -8,8 +8,8 @@ export const text: ComponentStyleConfig = {
     },
   },
   baseStyle: {
-    fontSize: '0.875rem',
-    lineHeight: 1.42857,
+    fontSize: '1rem',
+    lineHeight: 1.6,
     fontWeight: 400,
   },
 };

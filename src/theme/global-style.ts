@@ -16,6 +16,7 @@ export const globalStyle: SystemStyleObject = {
     flexDirection: 'column',
   },
   body: {
+    fontFamily: 'Inter, system-ui, sans-serif',
     fontDisplay: 'swap',
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
