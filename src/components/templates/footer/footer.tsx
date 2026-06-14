@@ -80,7 +80,7 @@ export const Footer = () => {
                 support@stitchingmaterial.com
               </Text>
               <Text fontSize="sm" color="gray.600">
-                +1 (800) 123-4567
+                +92 318 4311548
               </Text>
             </Stack>
             <HStack spacing={3} mt={2}>
