@@ -77,10 +77,15 @@ export const Footer = () => {
             <Stack spacing={2}>
               <Text fontWeight="semibold">Customer care</Text>
               <Text fontSize="sm" color="gray.600">
-                support@stitchingmaterial.com
+                <a href="mailto:stitchingmaterial@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  stitchingmaterial@gmail.com
+                </a>
               </Text>
+
               <Text fontSize="sm" color="gray.600">
-                +92 318 4311548
+                <a href="tel:+923184311548" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  +92 318 4311548
+                </a>
               </Text>
             </Stack>
             <HStack spacing={3} mt={2}>
