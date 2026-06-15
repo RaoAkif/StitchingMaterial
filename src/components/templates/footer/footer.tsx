@@ -24,8 +24,8 @@ const navLinks = [
 ];
 
 const socialLinks: Array<{ label: string; href: string; icon: IconType }> = [
-  { label: 'Instagram', href: 'https://instagram.com', icon: FaInstagram },
-  { label: 'Facebook', href: 'https://facebook.com', icon: FaFacebookF },
+  { label: 'Instagram', href: 'https://www.instagram.com/StitchingMaterial', icon: FaInstagram },
+  { label: 'Facebook', href: 'https://www.facebook.com/StitchingMaterial', icon: FaFacebookF },
   { label: 'Pinterest', href: 'https://pinterest.com', icon: FaPinterestP },
   { label: 'TikTok', href: 'https://tiktok.com', icon: FaTiktok },
 ];
